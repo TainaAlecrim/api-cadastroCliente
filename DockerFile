@@ -1,4 +1,4 @@
-# Fase de build usando SDK do .NET
+# Fase de build usando SDK do .NET 8.0
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 WORKDIR /app
@@ -7,7 +7,7 @@ WORKDIR /app
 COPY *.csproj ./
 RUN dotnet restore
 
-# Copia todo código e publica aplicação
+# Copia todo o código e publica aplicação
 COPY . ./
 RUN dotnet publish -c Release -o out
 
@@ -18,4 +18,5 @@ WORKDIR /app
 
 COPY --from=build /app/out ./
 
-ENTRYPOINT ["dotnet", "SeuProjeto.dll"]
+# Substitua "CadastroClientes.Api.dll" pelo nome do seu projeto
+ENTRYPOINT ["dotnet", "CadastroClientes.Api.dll"]
