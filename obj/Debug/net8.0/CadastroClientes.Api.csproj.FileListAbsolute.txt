@@ -43,3 +43,4 @@ C:\Users\Tainá Alecrim\Projetos\CadastroClientes.Api\obj\Debug\net8.0\refint\Ca
 C:\Users\Tainá Alecrim\Projetos\CadastroClientes.Api\obj\Debug\net8.0\CadastroClientes.Api.pdb
 C:\Users\Tainá Alecrim\Projetos\CadastroClientes.Api\obj\Debug\net8.0\CadastroClientes.Api.genruntimeconfig.cache
 C:\Users\Tainá Alecrim\Projetos\CadastroClientes.Api\obj\Debug\net8.0\ref\CadastroClientes.Api.dll
+C:\Users\Tainá Alecrim\Projetos\CadastroClientes.Api\obj\Debug\net8.0\CadastroClientes.Api.sourcelink.json

@@ -1,0 +1,21 @@
+# Fase de build usando SDK do .NET
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+WORKDIR /app
+
+# Copia arquivos de projeto e restaura dependências (cache otimizado)
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copia todo código e publica aplicação
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Fase de runtime, imagem menor apenas para rodar a aplicação
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+WORKDIR /app
+
+COPY --from=build /app/out ./
+
+ENTRYPOINT ["dotnet", "SeuProjeto.dll"]
