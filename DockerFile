@@ -19,4 +19,4 @@ WORKDIR /app
 COPY --from=build /app/out ./
 
 # Substitua "CadastroClientes.Api.dll" pelo nome do seu projeto
-ENTRYPOINT ["dotnet", "CadastroClientes.Api"]
+ENTRYPOINT ["dotnet", "CadastroClientes.Api.dll"]
